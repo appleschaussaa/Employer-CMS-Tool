@@ -2,10 +2,10 @@
   "name": "employer-cms-tool",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "dependencies": {
     "console.table": "^0.10.0",
     "inquirer": "^8.2.4",
-    "mysql2": "^3.1.0"
+    "mysql2": "^3.1.0",
+    "sql-formatter": "^12.1.0"
   }
 }
