@@ -92,10 +92,10 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [Example resource 1](https://www.w3schools.com/sql/sql_ref_keywords.asp) - Helpful resource when working with SQL
 - [Example resource 2](https://dev.mysql.com/doc/refman/8.0/en/fixed-point-types.html#:~:text=Standard%20SQL%20requires%20that%20DECIMAL,DECIMAL(%20M%20%2C0)%20.) - decimals werent covered in the link above.
 - [Example resource 1](https://developer.mozilla.org/en-US/docs/Web/API/console/table) - helps learn how to use console.table
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Example resource 2](https://www.mysqltutorial.org/mysql-cheat-sheet.aspx) - kept this around in my browser as a reminder
+- [Example resource 1](https://morioh.com/p/0b9636237f5c) - similar to the npm inquirer page but better displayed and examples.
+- [Example resource 2](https://www.digitalocean.com/community/tutorials/how-to-use-the-switch-statement-in-javascript) - Really was confused on how to proceed after creating the beginning to the mainMenu prompt but this helped. Seemed better than a bunc of If Else statements.
+- [Example resource 1](https://www.w3schools.com/nodejs/nodejs_mysql.asp) - since this project is local based and are not using routes, this helped with connecting.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 ​
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
