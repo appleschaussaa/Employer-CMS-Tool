@@ -1,9 +1,12 @@
 const inquirer = require("inquirer");
+const mysql = require("mysql2");
 const consTable = require("console.table");
+const db = require("./index");
 // might need to turn this into index and switch the current index to just a connection.js that exported into this.
 
 const mainMenu = () => {
-    inquirer.prompt({
+    inquirer.prompt(
+        {
         type: "list",
         name: "menuSelection",
         message: "What would you like to do?",
@@ -18,13 +21,17 @@ const mainMenu = () => {
             "Quit",
         ] 
     })
-    .then(function(answer) {
-        switch(answer.menuSelection) {
+    .then(function(response) {
+        switch(response.menuSelection) {
             case "View All Employees":
-                // not the right display, just a placeholder. Same with below
-                display(db.employee);
+                // display("employee", " EMPLOYEES ");
+                // display(employeecms_db.employee);
+                db.query("SELECT * FROM employee", function (err, response) {
+                    if (err) throw err;
+                    console.log(response)
+                })
+                // viewEmployees();
                 break;
-            // need to create functions to add to the tables
             case "Add Employee":
                 newEmployee();
                 break;
@@ -32,43 +39,77 @@ const mainMenu = () => {
                 updateRole();
                 break;
             case "View All Roles":
-                display(db.role);
+                db.query(`SELECT * FROM role `)
                 break;
             case "Add Role":
                 newRole();
                 break;
             case "View All Departments":
-                display(db.department);
+                db.query(`SELECT * FROM department `)
                 break;
             case "Add Department":
                 newDepartment();
                 break;
             case "Quit":
-                // figure out/remind myself how to end Mysql connection
+
                 quitConnection();
                 break;
         }
+        // return
     })
 };
 
+// const viewEmployees = () => {
+//     let sql =       `SELECT employee.id, 
+//                     employee.first_name, 
+//                     employee.last_name, 
+//                     employee.role_id, 
+//                     employee.manager_id
+//                     FROM employee`;
+//     db.promise().query(sql, (err, response) => {
+//       if (err) throw err;
+//         console.table(response);
+//         console.log("here are the employees")
+//         mainMenu();
+//     });
+//   };
+
+// placeholders for actual code
 function newEmployee() {
+    db.query(``)
     consTable(employee.newEmployee)
 };
 
 function updateRole() {
+    db.query(``)
     consTable(role.updateRole)
 };
 
 function newRole() {
+    db.query(``)
     consTable(role.newRole)
 };
 
 function newDepartment() {
+    db.query(``)
     consTable(department.newDepartment)
 };
 
+// read that a exit was the reason it would not keep prompt open in node
 function quitConnection() {
-    conection.end()
-};
+    inquirer.prompt({
+      name: "exit",
+      type: "confirm",
+      message: "Are you sure you want to exit?",
+    })
+    .then(function (response) {
+      if (response.quitConnection == true) {
+        connection.end();
+      }
+      else {
+        mainMenu();
+      }
+    });
+}
 
-module.exports = mainMenu
+module.exports = mainMenu;

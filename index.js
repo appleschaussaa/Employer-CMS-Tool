@@ -19,13 +19,11 @@ const db = mysql.createConnection(
 );
 
 db.connect(function(err) {
-    if (err)
-        console.log("could not connect");
-    mainMenu
-        console.log(`Connected to the employee_db database`)
+    if (err) throw err;
+    console.log(`Connected to the employee_db database ${mainMenu()}`);
 });
 
-// db.query(` select * from department`)
+module.exports = db;
 
 
 
