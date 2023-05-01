@@ -1,11 +1,7 @@
-// bringing in dependancies
-const inquirer = require("inquirer");
+// brings in dependencies and other files
 const mysql = require("mysql2");
-const consTable = require("console.table");
-const mainMenu = require("./constructor.js");
+const { mainMenu } = require("./constructor.js");
 require('dotenv').config();
-
-
 
 // creating a connection to the database
 const db = mysql.createConnection(
@@ -13,18 +9,16 @@ const db = mysql.createConnection(
         host: "localhost",
         user: "root",
         password: process.env.DB_PASSWORD,
-        database: "employeecms_db"
+        database: "employeecms_db",
+        waitForConnections: true,
+        connectionLimit: 10,
+        queueLimit: 0
     },
-    // what is shown to the client after connecting
 );
 
-db.connect(function(err) {
+// if an error displays message or else runs mainMenu(db)
+db.connect((err) => {
     if (err) throw err;
-    console.log(`Connected to the employee_db database ${mainMenu()}`);
-});
-
-module.exports = db;
-
-
-
-
+    console.log(`Connected to the employeecms_db database.`);
+    mainMenu(db);
+  });
