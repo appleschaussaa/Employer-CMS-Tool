@@ -29,9 +29,11 @@ Users should be able to:
 ![Alt text](Assets/Images/Employee-cms-tool-screenshot.png)
 ​
 
+​
 ### Links
 ​
-- Project GitHub Repo: [https://github.com/appleschaussaa/Employer-CMS-Tool]
+- GitHub Repo: [appleschaussaa/Employer-CMS-Tool](https://github.com/appleschaussaa/Employer-CMS-Tool)
+- Walkthrough video: [Employee cms tool walkthrough](https://drive.google.com/file/d/1B6K3se0mEWWRsycfN2pviVVqCoYF05HH/view?usp=sharing)
 ​
 ## My process
 ​
@@ -68,4 +70,4 @@ I didnt really get around to styling it in an cool way especially at the initial
 
 ## Acknowledgments
 
-I have to give it up to the TAs for initially getting me on the right path. After initially submitting one of them help me out on an issue I kept getting and gave me some great tips. 
+I have to give it up to the TAs for initially getting me on the right path. After initially submitting one of them help me out on an issue I kept getting and gave me some great tips.
